@@ -11,8 +11,8 @@ console.log(booledLoggeedIn)
 //1- true ; 0 false
 //"" false
 //"hello" true
-//*********************Operations************************* 
-
+//*********************Operations*************************  
+  
 let value =3
 let neg = -value //make number negative 
 
@@ -25,7 +25,7 @@ console.log("1"+2 +2)//122
 console.log(1+2+"3")//33
 
 console.log(null>0) // false
-console.log(nul == 0) // false
+console.log(null == 0) // false
 console.log(null>=0) //true
 
 //so here comparison operator work differently ,they convert null into number and treat it as 0 ,that is why >=0 give us true value
@@ -33,4 +33,24 @@ console.log(undefined == 0 ) // for undefined it is alwyas false with all compar
 
 // strich check ===
 console.log("2" === 2) //it check not onlu value but also check the datatype 
+
+//  types of memory --- stack and heap 
+//  stack used in primitive data type
+// heap used in non primitive , isme humko reference hi milta hai 
+
+let my1 = "hello"
+let my2 = my1
+my2 = "hey"
+
+console.log(my1)
+console.log(my2)
+
+let user = {
+    email :"abc.com",
+    name :"saanjhi"
+}
+let user2 = user
+user2.email = "chd.com"
+console.log(user);
+console.log(user2);
 

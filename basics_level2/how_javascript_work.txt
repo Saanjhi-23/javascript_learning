@@ -1,0 +1,56 @@
+            javascript execution context (do in two phase)
+                        / \
+                       /   \
+global execution context    function execution context 
+(one more named as
+ eval execution context)
+
+
+
+ ****
+ let var1 =10
+ let var2 = 5
+ function sum(n1,n2){
+    return n1+n2 
+ }
+ const result1 = sum(var1,var2)
+ ****
+
+phase one : memory creation phase---allocate the space for all the variables, fuction etc.
+phase two : execution phase ---
+1. global execution => allocate this under "this"
+2. memory phase mai saare variable ko memory allocate krte hai and unki value ko undefined 
+inialize krte hai .for function it also do same and instead of undefined it store defination
+ of function in the memory
+ ///***first phase cyclye********||uper
+
+//**********execution phase************\
+*then put values of variables 
+*when come to function like in result variable calling sum function their it will 
+create new execution context:::
+                (new variable environment + execution thread)=>sandbox for function
+                again it repeat the both phases => memory and execution phase
+                1.memory phase:var1=var2=undefined
+                2.execution phase: n1=>10, n2=>5  , then return will done in global execution 
+                3.after work then that sandbox will also delete.
+
+//*************Call Stack***************\\
+global execution added to stack , then when if we have methods like one() it will add to stack then execute and then pop from the stack 
+if before pop, another method added to stack then , it will simply Use LIFO way 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,5 @@
 
 let ran = Math.floor(Math.random()*100)+1;
-console.log(ran);
 const guessField = document.querySelector('#guessField')
 const submit=document.querySelector('#subt')
 const prev_guesses=document.querySelector('.guesses')
@@ -36,7 +35,6 @@ function validateGuess(guess){
         }
     }
 }
-
 function checkGuess(guess){
     if(guess === ran){
         displayMessage('you guessed the right number')
@@ -45,15 +43,11 @@ function checkGuess(guess){
         displayMessage('number is low')
 
     } else if(guess > ran){
-        displayMessage('number is high')
-        
+        displayMessage('number is high')   
     }
-
 }
-
 function displayMessage(message){
     lowOrHi.innerHTML=`<h2>${message}</h2>`
-
 }
 function displayGuess(guess){
     guessField.value=''
